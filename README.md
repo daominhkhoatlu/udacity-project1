@@ -11,7 +11,7 @@ index.html - The Index document for the website.
 
 ## Step 1: Create S3 Bucket
 I created S3 bucket name: khoadm3-bucket
-![](./img/step1.png)
+![](./img/step1_update.png)
  
 ## Step 2: Upload project to S3 bucket
 
@@ -19,19 +19,19 @@ Choose button Upload -> choose upload file to upload file index.html and README.
 -> Result after upload
  ![](./img/step2.PNG)
 
-## Step 3:Config security bucket S3:
-Choose tab Permission -> Edit bucket policy
--> Result after edit:
- 
-![](./img/step3.PNG)
-
-## Step 4:Config edit static web hosting
+## Step 3:Config edit static web hosting
 enable Static website hosting and enter index document and error document.
  ![](./img/step4.PNG)
 
+## Step 4: Check enable static website hosting:
+Choose my S3 bucket -> Properties tab -> Check enable static website hosting and bucket website endpoint
+-> Result after edit:
+
+![](./img/step3_update.png)
+
 ## Step 5: Create CloudFront:
 Search CloudFront -> Create distribution
- ![](./img/step5.PNG)
+ ![](./img/step5.png)
 ## Step 6: Config CloudFront
 Setting origin and watting deploy
 ![](./img/step6.PNG)
@@ -41,8 +41,14 @@ CloudFront -> copy domain name of distribution configed -> paste in browser:
 
  ![](./img/step7.png)
 
-=> result:
+=> result 1: URL domain cloudfront: https://d26xo77xg9msy8.cloudfront.net/
  ![](./img/step8.png)
+
+=> result 2: URL domain access website-endpoint: http://khoadm3-bucket.s3-website-us-east-1.amazonaws.com/
+![](./img/result2.PNG)
+
+=> result 3: URL domain Access bucket S3 object URL: https://khoadm3-bucket.s3.amazonaws.com/index.html
+![](./img/result3.PNG)
 
 
 
